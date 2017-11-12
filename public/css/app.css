@@ -1,0 +1,41 @@
+body {
+    font-family: Roboto, sans-serif !important;
+}
+
+.btn-flat {
+    background-color: #2BBBAD;
+    border-color: #FFF;
+}
+
+.btn-flat:hover {
+    background-color: #2ccbbe;
+    border-color: #FFF;
+
+}
+
+.carousel-inner {
+    border-radius:5px;
+}
+
+#featured-products-heading {
+    font-weight: 300;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.search-display {
+    z-index: 6000;
+    position: absolute;
+    width: 220px;
+    right: 25px;
+    top: 60px;
+}
+.hover a:hover{
+    background-color: #55ACEE;
+    color:#FFFF;
+    text-decoration: none;
+}
+.inherit {
+    text-decoration: none;
+    color: inherit;
+}
