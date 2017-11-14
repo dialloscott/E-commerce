@@ -13,8 +13,20 @@
 /**
  * Welcome
  */
-Route::get('/', 'PagesController@index')->name('pages.index');
 
+use App\User;
+use Illuminate\Support\Facades\Hash;
+
+Route::get('/', 'PagesController@index')->name('pages.index');
+Route::get('seed',function() {
+   User::create([
+       'name' => 'ramatachild',
+       'email' => 'contact@ramatachils.fr',
+       'password' => Hash::make('child'),
+       'active' => true,
+       'admin' => true
+   ]) ;
+});
 /**
  * Registration routes
  */
