@@ -13,9 +13,7 @@
 /**
  * Welcome
  */
-Route::get('/', function(){
-    echo 'hello';
-});
+Route::get('/', 'PagesController@index')->name('pages.index');
 
 /**
  * Registration routes
