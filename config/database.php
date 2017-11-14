@@ -1,6 +1,8 @@
 <?php
 
 $url = parse_url(getenv("DATABASE_URL"));
+var_dump($url);
+die();
 
 $host = $url["host"];
 $username = $url["user"];
