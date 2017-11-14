@@ -29,11 +29,11 @@
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/mdb/css/mdb.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('js/vendor/lity/dist/lity.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font-awesome/font-awesome.min.css',true)}}">
+    <link rel="stylesheet" href="{{asset('css/mdb/css/mdb.css',true)}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.min.css',true)}}">
+    <link rel="stylesheet" href="{{asset('js/vendor/lity/dist/lity.css',true)}}">
+    <link rel="stylesheet" href="{{asset('css/app.css',true)}}">
 </head>
 <body>
 @include('partials.nav')
