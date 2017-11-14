@@ -18,7 +18,8 @@ trait UploadImage
 
     public function imageUrl():string
     {
-        return Storage::url($this->getParentDir().'/'.$this->name);
+
+        return $this->getParentDir().'/'.$this->name;
     }
 
     public function deleteImage()
