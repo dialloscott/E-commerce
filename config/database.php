@@ -6,8 +6,6 @@ $host = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $database = ltrim($url["path"],'/');
-var_dump($host,$username,$password,$database);
-die();
 return [
 
     /*
@@ -21,7 +19,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'psgsql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
