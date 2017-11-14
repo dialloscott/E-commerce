@@ -38,9 +38,11 @@
                         <li class="dropdown-item">
                             <a href="">Profile</a>
                         </li>
+                        @if($user->isAdmin())
                             <li class="dropdown-item">
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
+                        @endif
                         <li class="dropdown-divider"></li>
                         <li class="dropdown-item">
                             <a href="{{route('logout')}}" onclick="event.preventDefault();

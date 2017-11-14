@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     public function isAdmin():bool
     {
-        return  true;
+        return $this->admin == true;
     }
     public function carts()
     {
