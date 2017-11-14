@@ -9,7 +9,7 @@
     <meta name="keywords"
           content="shopping, ecommerce, store, electronics, electronics store, lamine, lamine, github, laravel, laravel 5, laravel 5.5">
     <meta name="author" content="lamine diallo">
-    <link rel="shortcut icon" href="{{asset('fav-icon.png')}}">
+    <link rel="shortcut icon" href="{{asset('fav-icon.png',true)}}">
     <title>E-commerce Store</title>
     <style>
         .navbar a{

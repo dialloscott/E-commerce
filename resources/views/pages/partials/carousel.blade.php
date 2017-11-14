@@ -10,7 +10,7 @@
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div class="view hm-black-light">
-                <img class="d-block w-100 " src="{{asset('images/carousel/iphone_1.jpg',true)}}"
+                <img class="d-block w-100 " src="{{asset('images/carousel/iPhone_1.jpg',true)}}"
                      alt="First slide">
                 <div class="mask"></div>
             </div>
