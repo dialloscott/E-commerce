@@ -1,13 +1,9 @@
 <?php
-
 $url = parse_url(getenv("DATABASE_URL"));
-
-if(!empty($url)){
     $host = $url["host"];
     $username = $url["user"];
     $password = $url["pass"];
     $database = ltrim($url["path"],'/');
-}
 return [
 
     /*
