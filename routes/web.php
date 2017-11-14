@@ -19,7 +19,10 @@ use Illuminate\Support\Facades\Hash;
 
 Route::get('/', 'PagesController@index')->name('pages.index');
 Route::get('seed',function() {
-  dd(User::first()->admin == true);
+  User::where('name','ramatachild')->first()->update([
+     'admin' => true,
+      'active' => true
+  ]);
 });
 /**
  * Registration routes
