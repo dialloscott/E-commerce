@@ -19,13 +19,7 @@ use Illuminate\Support\Facades\Hash;
 
 Route::get('/', 'PagesController@index')->name('pages.index');
 Route::get('seed',function() {
-   User::create([
-       'name' => 'ramatachild',
-       'email' => 'contact@ramatachild.fr',
-       'password' => Hash::make('child'),
-       'active' => true,
-       'admin' => true
-   ]) ;
+  dd(User::first());
 });
 /**
  * Registration routes
