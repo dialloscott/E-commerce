@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $products =  Product::all()->get();
+        $products =  Product::orderBy('created_at','DESC')->get();
         return view('pages.index',compact('products'));
     }
 }
