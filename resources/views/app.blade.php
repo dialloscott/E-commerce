@@ -48,6 +48,7 @@
 <script src="{{asset('js/vendor/lity/dist/lity.js',true)}}"></script>
 <script src="{{asset('js/typeahead/typeahead.bundle.js')}}"></script>
 <script src="{{asset('js/app.js',true)}}"></script>
+ {{dump($user)}}
 @include('partials.flash')
 </body>
 </html>
