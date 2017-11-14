@@ -3,7 +3,7 @@
 @section('body')
     @include('pages.partials.carousel')
     {{--@include('pages.partials.mobile')--}}
-   {{-- <section class="section pb-3">
+    <section class="section pb-3">
         <h1 class="section-heading h4 pt-3 text-muted text-center">Featured products</h1>
         <div class="row">
             @foreach($products as $product)
@@ -43,6 +43,6 @@
             @endforeach
         </div>
 
-    </section> --}}
+    </section>
 
 @stop
