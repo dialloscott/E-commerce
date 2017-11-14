@@ -25,7 +25,7 @@
         }
     </style>
     <!-- Bootstrap core CSS -->
-    <script src="{{asset('js/vendor/swal/sweetalert.min.js')}}"></script>
+    <script src="{{asset('js/vendor/swal/sweetalert.min.js',true)}}"></script>
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome -->

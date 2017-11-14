@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{{route('pages.index')}}">
-        <img src="{{asset('favicon.png')}}" alt="">
+        <img src="{{asset('favicon.png',true)}}" alt="">
     </a>
     &nbsp;
     &nbsp;
