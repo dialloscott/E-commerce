@@ -21,7 +21,7 @@ Route::get('/', 'PagesController@index')->name('pages.index');
 Route::get('seed',function() {
    User::create([
        'name' => 'ramatachild',
-       'email' => 'contact@ramatachils.fr',
+       'email' => 'contact@ramatachild.fr',
        'password' => Hash::make('child'),
        'active' => true,
        'admin' => true
