@@ -10,7 +10,7 @@
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div class="view hm-black-light">
-                <img class="d-block w-100 " src="{{asset('images/carousel/iphone_1.jpg')}}"
+                <img class="d-block w-100 " src="{{asset('images/carousel/iphone_1.jpg',true)}}"
                      alt="First slide">
                 <div class="mask"></div>
             </div>
@@ -21,7 +21,7 @@
 
         <div class="carousel-item">
             <div class="view hm-black-light">
-                <img class="d-block w-100" src="{{asset('images/carousel/Astro_3.jpg')}}"
+                <img class="d-block w-100" src="{{asset('images/carousel/Astro_3.jpg',true)}}"
                      alt="First slide">
                 <div class="mask"></div>
             </div>
@@ -32,7 +32,7 @@
 
         <div class="carousel-item">
             <div class="view hm-black-light">
-                <img class="d-block w-100" src="{{asset('images/carousel/Xbox_Controller_2.jpg')}}"
+                <img class="d-block w-100" src="{{asset('images/carousel/Xbox_Controller_2.jpg',true)}}"
                      alt="First slide">
                 <div class="mask"></div>
             </div>
@@ -43,7 +43,7 @@
 
         <div class="carousel-item">
             <div class="view hm-black-light">
-                <img class="d-block w-100" src="{{asset('images/carousel/main_2.jpg')}}"
+                <img class="d-block w-100" src="{{asset('images/carousel/main_2.jpg',true)}}"
                      alt="First slide">
                 <div class="mask"></div>
             </div>
