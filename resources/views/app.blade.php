@@ -37,10 +37,11 @@
 </head>
 <body>
 @include('partials.nav')
+
 <div class="container">
     @yield('body')
 </div>
-<script src="{{asset('css/mdb/js/jquery-3.2.1.min.js',true)}}"></script>
+<script  src="{{asset('css/mdb/js/jquery-3.2.1.min.js',true)}}"></script>
 <script src="{{asset('js/bootstrap/bootstrap.min.js',true)}}"></script>
 <script src="{{asset('css/mdb/js/mdb.js',true)}}"></script>
 <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
