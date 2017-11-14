@@ -15,6 +15,7 @@
  */
 Route::get('/', function(){
     echo 'hello';
+    die();
 });
 
 /**
