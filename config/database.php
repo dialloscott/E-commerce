@@ -1,14 +1,13 @@
 <?php
 
 $url = parse_url(getenv("DATABASE_URL"));
-var_dump($url);
-die();
 
 $host = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $database = ltrim($url["path"],'/');
-
+var_dump($host,$username,$password,$database);
+die();
 return [
 
     /*
