@@ -14,7 +14,7 @@
  * Welcome
  */
 Route::get('/', function(){
-    dd(parse_url(getenv("DATABASE_URL")));
+    echo 'hello';
 });
 
 /**
