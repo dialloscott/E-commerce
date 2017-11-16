@@ -5,9 +5,9 @@
         <div class="col-md-8">
             <div class="row">
                 @foreach($product->images as $image)
-                    <div class="col">
+                    <div class="col-xs-6 col-sm-4 col-md-3">
                         <a href="{{ $image->imageUrl() }}" data-lity>
-                            <img src="{{$image->imageUrl()}}" alt=""  class="img-thumbnail" style="width: 100%;">
+                            <img src="{{$image->imageUrl()}}" alt=""  class="" style="width: 100%;">
                         </a>
                     </div>
                 @endforeach
