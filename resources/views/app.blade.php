@@ -9,7 +9,7 @@
     <meta name="keywords"
           content="shopping, ecommerce, store, electronics, electronics store, lamine, lamine, github, laravel, laravel 5, laravel 5.5">
     <meta name="author" content="lamine diallo">
-    <link rel="shortcut icon" href="{{asset('fav-icon.png',true)}}">
+    <link rel="shortcut icon" href="{{asset('fav-icon.png')}}">
     <title>E-commerce Store</title>
     <style>
         .navbar a{
@@ -48,7 +48,6 @@
 <script src="{{ asset('js/axios/axios.min.js') }}"></script>
 <script src="{{asset('js/vendor/lity/dist/lity.js')}}"></script>
 <script src="{{asset('js/typeahead/typeahead.bundle.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
 @include('partials.flash')
 </body>

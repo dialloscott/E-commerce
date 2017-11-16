@@ -44,8 +44,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ $cart->product->featuredImage()->imageUrl() }}"
-                             alt="{{$cart->product->featuredImage()->name}}" class="img-thumbnail" style="width: 40%;">
+                        <img src="{{ $cart->product->featuredImage() ?$cart->product->featuredImage()->imageUrl(): '' }}"
+                             alt="" class="img-thumbnail" style="width: 40%;">
                     </div>
                     <div class="col-md-4">
                         SKU: <strong>{{ $cart->product->sku }}</strong>
@@ -75,5 +75,3 @@
         @endif
     </div>
 @stop
-{{--
---}}

@@ -43,6 +43,25 @@ jQuery(document).ready(function ($) {
             })
         }
     })
+    if(document.getElementById('payment-form')){
+        let stripe = Stripe('pk_test_sZSza9qT3t4HSJvUAbBHOFQ6')
+        let elements = stripe.elements();
+        let card = elements.create('card')
+        let form = $('#form')
+        card.mount('#payment-form')
+        form.submit(event => {
+            event.preventDefault()
+            $(this).find('#payment-btn').prop('disabled', true)
+            stripe.createToken(card).then(result => {
+                if (result.error) {
+                    $('#card-errors').html(result.error.message)
+                } else {
+                    let token = result.token.id
+                    form.append($('<input type="hidden" name="stripeToken" value="' + token + '">'))
+                    form.get(0).submit()
+                }
+            })
+        })
 
-
+    }
 })

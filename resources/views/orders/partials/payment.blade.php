@@ -70,37 +70,6 @@
                                placeholder="Full Name">
                     </div>
                 </div>
-                {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                        {{--<input type="text" name="card" id="card" class="form-control" title="card"--}}
-                               {{--placeholder="Card Number">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                        {{--<input type="text" name="cvc" id="cvc" data-strip="cvc" maxlength="5" class="form-control"--}}
-                               {{--title="cvc" placeholder="CVC">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-3">--}}
-                    {{--<div class="form-group">--}}
-                        {{--<select name="exp_month" id="exp_month" class="form-control" title="exp.month" data-strip="exp.month">--}}
-                            {{--@foreach(getMonths() as $k => $v)--}}
-                                {{--<option value="{{ $k }}" {{ $k == date('m') ? 'selected' : '' }}>{{ $v }}</option>--}}
-                            {{--@endforeach--}}
-                        {{--</select>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-3">--}}
-                    {{--<div class="form-group">--}}
-                        {{--<select name="exp_year" id="exp_year" class="form-control" title="exp.year" data-strip="exp.year">--}}
-                            {{--@foreach(getYears() as $k => $v)--}}
-                                {{--<option value="{{ $k }}" {{ $k == date('Y') ? 'selected' : '' }} >{{ $v }}</option>--}}
-                            {{--@endforeach--}}
-                        {{--</select>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
             <div class="col-md-6" id="payment-form">
                 <div id="card-errors" role="alert"></div>
             </div>
@@ -110,26 +79,6 @@
             </div>
         </form>
 
+
     </div>
 </div>
-<script>
-
-    let stripe = Stripe('pk_test_sZSza9qT3t4HSJvUAbBHOFQ6')
-    let elements = stripe.elements();
-    let card = elements.create('card')
-    let form = $('#form')
-    card.mount('#payment-form')
-    form.submit(event => {
-        event.preventDefault()
-        $(this).find('#payment-btn').prop('disabled', true)
-        stripe.createToken(card).then(result => {
-            if (result.error) {
-                $('#card-errors').html(result.error.message)
-            } else {
-                let token = result.token.id
-                form.append($('<input type="hidden" name="stripeToken" value="' + token + '">'))
-                form.get(0).submit()
-            }
-        })
-    })
-</script>
