@@ -1,11 +1,10 @@
 <?php
 $url = parse_url(getenv("DATABASE_URL"));
-$prod = getenv('APP_ENV');
+$prod = getenv('APP_ENV') === 'production';
 $host = getValue($url, 'host');
 $username = getValue($url, 'user');
 $password = getValue($url, 'pass');
 $database = ltrim(getValue($url, 'path'), '/');
-dd(getenv('APP_ENV'));
 return [
 
     /*
