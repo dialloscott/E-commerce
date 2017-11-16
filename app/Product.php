@@ -48,7 +48,9 @@ class Product extends Model
             }
         });
         static::deleted(function(Product $product){
-           rmdir(public_path("images/products/{$product->id}")) ;
+            if(is_dir($dir = "images/products/{$product->id}")){
+                rmdir(public_path($dir)) ;
+            }
         });
     }
 }
