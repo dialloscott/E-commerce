@@ -66,3 +66,11 @@ function getYears()
     }
     return $dates;
 }
+
+function getValue(?array $array, $key)
+{
+    if (array_key_exists($key, $array)) {
+        return $array[$key];
+    }
+    return null;
+}

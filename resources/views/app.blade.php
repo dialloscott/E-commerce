@@ -25,15 +25,15 @@
         }
     </style>
     <!-- Bootstrap core CSS -->
-    <script src="{{asset('js/vendor/swal/sweetalert.min.js',true)}}"></script>
+    <script src="{{asset('js/vendor/swal/sweetalert.min.js')}}"></script>
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome/font-awesome.min.css',true)}}">
-    <link rel="stylesheet" href="{{asset('css/mdb/css/mdb.css',true)}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.min.css',true)}}">
-    <link rel="stylesheet" href="{{asset('js/vendor/lity/dist/lity.css',true)}}">
-    <link rel="stylesheet" href="{{asset('css/app.css',true)}}">
+    <link rel="stylesheet" href="{{asset('css/font-awesome/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/mdb/css/mdb.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('js/vendor/lity/dist/lity.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
 @include('partials.nav')
@@ -41,14 +41,15 @@
 <div class="container">
     @yield('body')
 </div>
-<script  src="{{asset('css/mdb/js/jquery-3.2.1.min.js',true)}}"></script>
-<script src="{{asset('js/bootstrap/bootstrap.min.js',true)}}"></script>
-<script src="{{asset('css/mdb/js/mdb.js',true)}}"></script>
+<script  src="{{asset('css/mdb/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('js/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{asset('css/mdb/js/mdb.js')}}"></script>
 <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
-<script src="{{ asset('js/axios/axios.min.js',true) }}"></script>
-<script src="{{asset('js/vendor/lity/dist/lity.js',true)}}"></script>
+<script src="{{ asset('js/axios/axios.min.js') }}"></script>
+<script src="{{asset('js/vendor/lity/dist/lity.js')}}"></script>
 <script src="{{asset('js/typeahead/typeahead.bundle.js')}}"></script>
-<script src="{{asset('js/app.js',true)}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 @include('partials.flash')
 </body>
 </html>
