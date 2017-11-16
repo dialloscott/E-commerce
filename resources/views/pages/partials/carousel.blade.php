@@ -6,6 +6,7 @@
         <li data-target="#carousel-1" data-slide-to="2"></li>
         <li data-target="#carousel-1" data-slide-to="3"></li>
     </ol>
+    
     <!--/.Indicators-->
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
