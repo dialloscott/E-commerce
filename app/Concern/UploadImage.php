@@ -24,7 +24,9 @@ trait UploadImage
 
     public function deleteImage()
     {
-       unlink(public_path("images/products/{$this->product->id}/{$this->name}"));
+        if(file_exists($file = public_path("images/products/{$this->product->id}/{$this->name}"))){
+            unlink($file);
+        }
     }
 
     private function getBaseDir($parent):?string
