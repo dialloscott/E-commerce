@@ -5,7 +5,7 @@ $host = getValue($url, 'host');
 $username = getValue($url, 'user');
 $password = getValue($url, 'pass');
 $database = ltrim(getValue($url, 'path'), '/');
-
+dd(getenv('APP_ENV'));
 return [
 
     /*
