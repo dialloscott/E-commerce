@@ -12,7 +12,7 @@ class ImagesController extends Controller
         $request->validate([
             'image_id' => 'required|exists:images,id'
         ]);
-        Image::where('product_id',$id)->first()->update([
+        Image::where('product_id',$id)->update([
             'featured' => false
         ]);
         Image::where('id', $request->image_id)->first()->update([
