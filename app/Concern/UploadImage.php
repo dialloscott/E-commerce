@@ -19,7 +19,7 @@ trait UploadImage
     public function imageUrl():string
     {
 
-        return $this->getParentDir().'/'.$this->name;
+        return url($this->getParentDir().'/'.$this->name);
     }
 
     public function deleteImage()
