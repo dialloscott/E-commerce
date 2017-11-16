@@ -44,7 +44,7 @@
                             </td>
                             <td>
                                 @if($product->featuredImage())
-                                    <img src="{{ $product->featuredImage()->imageUrl() }}" alt="" style="max-width:60%;">
+                                    <img src="/{{ $product->featuredImage()->imageUrl() }}" alt="" style="max-width:60%;">
                                 @endif
                             </td>
                             <td>

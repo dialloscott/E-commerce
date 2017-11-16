@@ -21,7 +21,7 @@
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <p>{{$image->id}}</p>
                 <a href="{{ $image->imageUrl() }}" data-lity>
-                    <img src="{{$image->imageUrl()}}" alt="" width="200" height="200" class="img-thumbnail"
+                    <img src="/{{$image->imageUrl()}}" alt="" width="200" height="200" class="img-thumbnail"
                          data-id{{$image->id}}>
                 </a>
             </div>

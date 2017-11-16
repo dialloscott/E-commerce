@@ -9,7 +9,7 @@
     <meta name="keywords"
           content="shopping, ecommerce, store, electronics, electronics store, lamine, lamine, github, laravel, laravel 5, laravel 5.5">
     <meta name="author" content="lamine diallo">
-    <link rel="shortcut icon" href="{{asset('fav-icon.png',true)}}">
+    <link rel="shortcut icon" href="{{asset('fav-icon.png')}}">
     <title>Dashboard</title>
     <style>
         .navbar a{
@@ -22,28 +22,28 @@
         }
     </style>
     <!-- Bootstrap core CSS -->
-    <script src="{{asset('js/vendor/swal/sweetalert.min.js',true)}}"></script>
+    <script src="{{asset('js/vendor/swal/sweetalert.min.js')}}"></script>
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome/font-awesome.min.css',true)}}">
-    <link rel="stylesheet" href="{{asset('css/mdb/css/mdb.css',true)}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.min.css',true)}}">
+    <link rel="stylesheet" href="{{asset('css/font-awesome/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/mdb/css/mdb.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.min.css')}}">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
-    <link rel="stylesheet" href="{{asset('js/vendor/lity/dist/lity.css',true)}}">
-    <link rel="stylesheet" href="{{asset('css/app.css',true)}}">
+    <link rel="stylesheet" href="{{asset('js/vendor/lity/dist/lity.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
 @include('admin.partials.nav')
 <div class="container">
     @yield('body')
 </div>
-<script src="{{asset('css/mdb/js/jquery-3.2.1.min.js',true)}}"></script>
-<script src="{{asset('js/bootstrap/bootstrap.min.js',true)}}"></script>
+<script src="{{asset('css/mdb/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('js/bootstrap/bootstrap.min.js')}}"></script>
 <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-<script src="{{asset('js/vendor/lity/dist/lity.js',true)}}"></script>
-<script src="{{asset('css/mdb/js/mdb.js',true)}}"></script>
-<script src="{{asset('js/app.js',true)}}"></script>
+<script src="{{asset('js/vendor/lity/dist/lity.js')}}"></script>
+<script src="{{asset('css/mdb/js/mdb.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 <script>
     Dropzone.options.addImage = {
         paramName: "image", // The name that will be used to transfer the file

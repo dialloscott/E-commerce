@@ -11,7 +11,7 @@
                     <div class="card animated zoomIn">
                         <div class="view overlay hm-white-slight z-depth-1">
                             <a href="{{route('products.desc',$product->name)}}">
-                                <img src="/gfgfggf/{{ $product->featuredImage() ? $product->featuredImage()->imageUrl() : '' }}"
+                                <img src="{{ $product->featuredImage() ? $product->featuredImage()->imageUrl() : '' }}"
                                      alt="" class="img-fluid"
                                      style="width: 100%;height: 80%;">
                             </a>
