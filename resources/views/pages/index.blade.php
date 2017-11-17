@@ -3,6 +3,8 @@
 @section('body')
     @include('pages.partials.carousel')
     {{--@include('pages.partials.mobile')--}}
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda autem, doloremque, dolores ducimus enim exercitationem fuga fugit inventore maxime nemo pariatur porro quas, quis sequi voluptatibus voluptatum. Provident, repellendus?
+    <img src="https://www.dropbox.com/home/heroku/products/3?preview=2a7b73788e47fbe2c387fd0556ca3238.jpeg" alt="">
     <section class="section pb-3">
         <h1 class="section-heading h4 pt-3 text-muted text-center">Featured products</h1>
         <div class="row">

@@ -6,7 +6,9 @@ use App\Brand;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
+use App\Image;
 use App\Product;
+use App\Repositories\DroboxStorage;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -114,13 +116,15 @@ class ProductsController extends Controller
         return redirect()->back();
     }
 
-    public function attachImage(Request $request, int $id)
+    public function attachImage(Request $request,DroboxStorage $droboxStorage, int $id)
     {
-
         $product = Product::where('id', $id)->first();
         $file = $request->file('image');
-        $image = $product->images()->create(['name' => $file->getClientOriginalName()]);
-        return $image->upload($file,$product);
+        $image = $product->images()->create([
+            'name' => md5($file->getClientOriginalName().time()).'.'.$file->extension()
+        ]);
+        $image->upload($product,$file,$droboxStorage);
+        return $image->name;
 
     }
 
