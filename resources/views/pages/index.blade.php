@@ -33,9 +33,11 @@
                                     <input type="hidden" name="product" value="{{ $product->id }}">
                                     <input type="hidden" name="quantity" value="1">
                                     @if($user && !$user->alreadyAddToCart($product))
-                                        <button class="btn  btn-success" disabled>Already in your cart</button>
-                                        @else
+                                        <button class="btn  btn-success" disabled>Add to cart</button>
+                                        @elseif(!$user)
                                         <button class="btn  btn-success">Add to card</button>
+                                        @else
+                                        <button class="btn  btn-success" disabled>Already in your cart</button>
                                     @endif
                                 </form>
                             </div>
