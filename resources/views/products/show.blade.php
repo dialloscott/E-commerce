@@ -55,7 +55,7 @@
                 </div>
                 @if($user && !$user->alreadyAddToCart($product))
                     <button class="btn btn-default" type="submit">Add to cart</button>
-                    @elseif($user)
+                    @elseif(!$user)
                     <button class="btn btn-default" type="submit">Add to cart</button>
                     @else
                     <button class="btn btn-default" type="submit" disabled>Add to cart</button>
