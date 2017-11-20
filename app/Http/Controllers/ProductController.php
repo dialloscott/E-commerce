@@ -11,7 +11,7 @@ class ProductController extends Controller
     public function show(string $name)
     {
         $product = Product::where('name', $name)->first();
-        $products = Product::where('category_id', $product->category_id)->where('id', '<>',$product->id)->take(3)->get();
+        $products = Product::where('brand_id', $product->category_id)->where('id', '<>',$product->id)->take(3)->get();
         return view('products.show', compact('product', 'products'));
     }
 
