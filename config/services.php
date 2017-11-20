@@ -34,5 +34,10 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'cloudinary' => [
+        'cloud_name' => 'dutwzlyjp',
+        'api_key' => '523449133456173',
+        'api_secret' => 'TrktkcCjNhvYOGsgUYMcomkMtko'
+    ]
 
 ];

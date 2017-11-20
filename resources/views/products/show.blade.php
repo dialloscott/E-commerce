@@ -6,8 +6,8 @@
             <div class="row">
                 @foreach($product->images as $image)
                     <div class="col-xs-6 col-sm-4 col-md-3">
-                        <a href="{{ $image->imageUrl() }}" data-lity>
-                            <img src="{{$image->imageUrl()}}" alt=""  class="" style="width: 100%;">
+                        <a href="{{ $image->secure_url }}" data-lity>
+                            <img src="{{$image->secure_url }}" alt=""  class="" style="width: 100%;">
                         </a>
                     </div>
                 @endforeach
@@ -64,10 +64,10 @@
                         <a href="{{route('products.desc',$product_s->name)}}"
                            style="color: inherit; text-decoration: none;">
                             <div class="mt-2">
-                                {{$product_s->name}}
+                               <strong> {{$product_s->name}}</strong>
                             </div>
-                            <div class="">
-                                <img src="{{$product_s->featuredImage() ? $product_s->featuredImage()->imageUrl() : ''}}" alt="" style="width: 100%;">
+                            <div class="mt-2">
+                                <img src="{{$product_s->featuredImage() ? $product_s->featuredImage()->secure_url : ''}}" alt="" style="width: 60%;" class="img-thumbnail">
                             </div>
                         </a>
                     </div>

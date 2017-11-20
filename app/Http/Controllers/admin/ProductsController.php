@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Image;
 use App\Product;
+use App\Repositories\CloudinaryFileUploader;
 use App\Repositories\DroboxStorage;
 use Illuminate\Http\Request;
 
@@ -105,27 +106,41 @@ class ProductsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int $id
+     * @param CloudinaryFileUploader $cloudinaryFileUploader
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, CloudinaryFileUploader $cloudinaryFileUploader)
     {
         if ($this->user()->isAdmin()) {
-            Product::findOrFail($id)->delete();
+            $product = Product::find($id);
+            if ($product) {
+                foreach ($product->images as $image) {
+                    $cloudinaryFileUploader->destroy($image->public_id);
+                    $image->delete();
+                }
+                $product->delete();
+                return redirect()->back();
+            }
             return redirect()->back();
         }
         return redirect()->back();
     }
 
-    public function attachImage(Request $request,DroboxStorage $droboxStorage, int $id)
+    public function attachImage(Request $request, CloudinaryFileUploader $cloudinaryFileUploader, int $id)
     {
         $product = Product::where('id', $id)->first();
         $file = $request->file('image');
-        $image = $product->images()->create([
-            'name' => md5($file->getClientOriginalName().time()).'.'.$file->extension()
-        ]);
-        $image->upload($product,$file,$droboxStorage);
-        return $image->name;
+        $fileName = md5($file->getClientOriginalName() . time()) . '.' . $file->extension();
 
+        $callApi = $cloudinaryFileUploader->upload($file->getPathname(), [
+            'public_id' => "products/{$product->id}/{$fileName}"
+        ]);
+        $image = $product->images()->create([
+            'name' => $fileName,
+            'public_id' => $callApi['public_id'],
+            'secure_url' => $callApi['secure_url']
+        ]);
+        return $image;
     }
 
 

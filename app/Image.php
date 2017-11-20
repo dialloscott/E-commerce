@@ -9,7 +9,7 @@ class Image extends Model
 {
     use UploadImage;
 
-    protected $fillable = ['name', 'featured'];
+    protected $fillable = ['name', 'featured','public_id','secure_url'];
 
     public $timestamps = false;
 
@@ -17,11 +17,5 @@ class Image extends Model
     {
         return $this->belongsTo(Product::class);
     }
-    public static function boot()
-    {
-        parent::boot();
-        static::deleting(function (Image $image){
-         $image->deleteImage();
-        });
-    }
+
 }

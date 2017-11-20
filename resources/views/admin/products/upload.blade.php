@@ -5,7 +5,7 @@
     @if(!$user->isAdmin())
         <p class="text-center">Cannot upload images as {{ $user->name }}</p>
     @endif
-    @if($user->isAdmin())
+    @if($user && $user->isAdmin())
         @if($product->images()->count() > 7)
             <p class="text-center">Cannot upload more than 8 photos for one product.Delete some photos to upload other
                 photos.</p>
@@ -20,8 +20,8 @@
         @foreach($product->images as $image)
             <div class="col-xs-6 col-sm-4 col-md-3">
                 <p>{{$image->id}}</p>
-                <a href="{{ $image->imageUrl() }}" data-lity>
-                    <img src="{{$image->imageUrl()}}" alt="" width="200" height="200" class="img-thumbnail"
+                <a href="{{ $image->secure_url }}" data-lity>
+                    <img src="{{$image->secure_url}}" alt="" width="200" height="200" class="img-thumbnail"
                          data-id{{$image->id}}>
                 </a>
             </div>

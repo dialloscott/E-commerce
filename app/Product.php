@@ -40,17 +40,6 @@ class Product extends Model
         }
         return $image;
     }
-    public static function boot(){
-        parent::boot();
-        static::deleting(function(Product $product){
-            foreach ($product->images as $image) {
-               $image->delete();
-            }
-        });
-        static::deleted(function(Product $product){
-            if(is_dir($dir = "images/products/{$product->id}")){
-                rmdir(public_path($dir)) ;
-            }
-        });
-    }
+
+
 }

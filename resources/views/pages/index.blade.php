@@ -3,8 +3,6 @@
 @section('body')
     @include('pages.partials.carousel')
     {{--@include('pages.partials.mobile')--}}
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda autem, doloremque, dolores ducimus enim exercitationem fuga fugit inventore maxime nemo pariatur porro quas, quis sequi voluptatibus voluptatum. Provident, repellendus?
-    <img src="https://www.dropbox.com/home/heroku/products/3?preview=2a7b73788e47fbe2c387fd0556ca3238.jpeg" alt="">
     <section class="section pb-3">
         <h1 class="section-heading h4 pt-3 text-muted text-center">Featured products</h1>
         <div class="row">
@@ -13,7 +11,7 @@
                     <div class="card animated zoomIn">
                         <div class="view overlay hm-white-slight z-depth-1">
                             <a href="{{route('products.desc',$product->name)}}">
-                                <img src="{{ $product->featuredImage() ? $product->featuredImage()->imageUrl() : '' }}"
+                                <img src="{{ $product->featuredImage() ? $product->featuredImage()->secure_url : '' }}"
                                      alt="" class="img-fluid"
                                      style="width: 100%;height: 80%;">
                             </a>

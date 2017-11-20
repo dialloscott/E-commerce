@@ -19,11 +19,6 @@ trait UploadImage
         return $this->name;
     }
 
-    public function imageUrl(): string
-    {
-
-        return url($this->getParentDir() . '/' . $this->name);
-    }
 
     public function deleteImage()
     {
