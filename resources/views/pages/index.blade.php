@@ -37,7 +37,7 @@
                                         @elseif(!$user)
                                         <button class="btn  btn-success">Add to card</button>
                                         @else
-                                        <button class="btn  btn-success" disabled>Already in your cart</button>
+                                        <button class="btn  btn-success" disabled>Add to cart</button>
                                     @endif
                                 </form>
                             </div>
