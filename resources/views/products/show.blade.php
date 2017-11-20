@@ -55,6 +55,10 @@
                 </div>
                 @if($user && !$user->alreadyAddToCart($product))
                     <button class="btn btn-default" type="submit">Add to cart</button>
+                    @elseif($user)
+                    <button class="btn btn-default" type="submit">Add to cart</button>
+                    @else
+                    <button class="btn btn-default" type="submit" disabled>Add to cart</button>
                 @endif
             </form>
             <div class="h4 m-lg-3 text-muted">Similar Products</div>
